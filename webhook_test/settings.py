@@ -35,7 +35,7 @@ SECRET_KEY = 'django-insecure-mxd)+i@3v=83c1ufq694(jbt@pe+6br3h*gb#j5r)qgxg0u+t1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['bizu-hook.herokuapp.com']
+ALLOWED_HOSTS = ['bizu-hook.herokuapp.com', 'localhost']
 
 # Application definition
 
@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'bizu'
 ]
 
 HOOK_EVENTS = {

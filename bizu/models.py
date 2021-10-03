@@ -4,16 +4,10 @@ from django.db import models
 
 class User(models.Model):
     name = models.CharField(max_length=128)
+    email = models.CharField(max_length=128)
+    cidade = models.CharField(max_length=128)
+    endereco = models.CharField(max_length=128)
+    
 
-    def serialize_hook(self, hook):
-        # optional, there are serialization defaults
-        # we recommend always sending the Hook
-        # metadata along for the ride as well
-        print("ESTOU AQUI")
-        return {
-            'hook': hook.dict(),
-            'data': {
-                'id': self.id,
-                'name': self.nome,
-            }
-        }
+    def __str__(self) -> str:
+        return "{} <{}>".format(self.name, self.email)

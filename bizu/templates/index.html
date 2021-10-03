@@ -1,0 +1,21 @@
+{% if users %}
+    Usuários Cadastrados:
+    <ul>
+    {% for user in users %}
+        <li>{{ user.name }} -> {{ user.email }}. Localizado em: {{user.cidade}} , {{user.endereco}} </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No users are available!!</p>
+{% endif %}
+
+
+<br>
+<br>
+<br>
+
+<p>
+    Utilize o Omie para adicionar usuários aqui
+    <br>
+    Link: <a href="https://app.omie.com.br/">https://app.omie.com.br/</a>
+</p>
